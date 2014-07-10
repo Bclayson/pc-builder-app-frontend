@@ -3,7 +3,12 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+  .controller('QuestionsCtrl', ['$scope', function($scope) {
+    $scope.currentSlide = 1;
+    $scope.answerQuestion = function(questionId, answer){
+        $scope.currentSlide++;
+    }
+
 
   }])
   .controller('MyCtrl2', ['$scope', function($scope) {

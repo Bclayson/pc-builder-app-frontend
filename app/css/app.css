@@ -1,4 +1,8 @@
 /* app css stylesheet */
+body, html {
+    height: 100%;
+}
+
 
 .menu {
   list-style: none;
@@ -27,4 +31,36 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+#slider_body {
+    height: 100%;
+    width: 100%;
+    background: #77797a; /* Old browsers */
+    background: -moz-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#77797a), color-stop(15%,#a8a8a6), color-stop(50%,#a8a8a6), color-stop(85%,#a8a8a6), color-stop(100%,#77797a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* IE10+ */
+    background: linear-gradient(to right, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77797a', endColorstr='#77797a',GradientType=1 ); /* IE6-9 */
+    position: relative;
+}
+
+.slide {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.slide.active {
+    left: 0;
+}
+
+.slide h1 {
+    font-size: 75px;
 }
