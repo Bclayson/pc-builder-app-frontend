@@ -16,5 +16,10 @@ angular.module('myApp.controllers', [])
   }])
 
   .controller('ResultsCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
+    Restangular.one('computer').customPOST({
+      'budget' : 1000
+    }).then(function(data) {
+        $scope.data = data;
 
+    })
   }]);

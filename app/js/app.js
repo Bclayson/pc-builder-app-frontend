@@ -12,7 +12,7 @@ angular.module('myApp', [
 ]).
     config(['$routeProvider', "RestangularProvider", function ($routeProvider, RestangularProvider) {
         $routeProvider.when('/questions', {templateUrl: 'partials/questions.html', controller: 'QuestionsCtrl'});
-        $routeProvider.when('/results', {templateUrl: 'partials/results.html', controller: 'ResultCtrl'});
+        $routeProvider.when('/results', {templateUrl: 'partials/results.html', controller: 'ResultsCtrl'});
         $routeProvider.when('/', {templateUrl: 'landing-page/index.html', controller: 'LandingCtrl'});
         $routeProvider.otherwise({redirectTo: '/'});
        RestangularProvider.setBaseUrl('http://localhost:9001')
