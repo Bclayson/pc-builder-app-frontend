@@ -1,32 +1,81 @@
 <div id="slider_body">
+
     <div class="slide"
          ng-class="{active: currentSlide==1}">
-        <h1>Slide One</h1>
-        <button ng-click="answerQuestion()">One</button>
-        <button ng-click="answerQuestion()">Two</button>
-        <button ng-click="answerQuestion()">Three</button>
-        <button ng-click="answerQuestion()">Four</button>
+        <h2>What's Your Budget?</h2>
+        <button ng-click="answerQuestion('budget', '600')">$600</button>
+        <button ng-click="answerQuestion('budget', '800')">$800</button>
+        <button ng-click="answerQuestion('budget', '1000')">$1000</button>
+        <button ng-click="answerQuestion('budget', '1200+')">$1200</button>
+    </div>
+
+    <!--If answer = 1200 -->
+    <div class="slide"
+         ng-class="{active: currentSlide==2}">
+        <h2>Do You Want Watercooling</h2>
+        <button ng-click="answerQuestion('watercooler', 'Yes')">Yes</button>
+        <button ng-click="answerQuestion('watercooler', 'No')">No</button>
+    </div>
+
+    <!-- If answer = 1000-->
+    <div class="slide"
+         ng-class="{active: currentSlide==3}">
+        <h2>What Is Your Screen's Resolution?</h2>
+        <button ng-click="answerQuestion('resolution', '< 1920x1200')">< 1920x1200</button>
+        <button ng-click="answerQuestion('resolution', '>1 1920x1200')">> 1920x1200</button>
+    </div>
+
+    <!--If answer = 800 -->
+    <div class="slide"
+         ng-class="{active: currentSlide==4}">
+        <h2>Do You Want Oculus Rift?</h2>
+        <button ng-click="answerQuestion('oculus_rift', 'Yes')">Yes</button>
+        <button ng-click="answerQuestion('oculus_rift', 'No')">No</button>
+    </div>
+
+
+    <div class="slide"
+         ng-class="{active: currentSlide==5}">
+        <h2>Do You Want to Video Editing Capabilities?</h2>
+        <button ng-click="answerQuestion('video_editing', 'Yes')">Yes</button>
+        <button ng-click="answerQuestion('video_editing', 'No')">No</button>
+    </div>
+
+
+    <!--if answer = 600 -->
+    <div class="slide"
+         ng-class="{active: currentSlide==6}">
+        <h2>Do You Want a Sound Card?</h2>
+        <button ng-click="answerQuestion('sound_card', 'Yes')">Yes</button>
+        <button ng-click="answerQuestion('sound_card', 'No')">No</button>
     </div>
 
     <div class="slide"
-        ng-class="{active: currentSlide==2}">
-        <h1>Slide Two</h1>
-        <button ng-click="answerQuestion()">True</button>
-        <button ng-click="answerQuestion()">False</button>
+         ng-class="{active: currentSlide==7}">
+        <h2>Pick Your HDD</h2>
+        <button ng-click="answerQuestion('hdd', '1 TB')">1 TB</button>
+        <button ng-click="answerQuestion('hdd', '2 TB')">2 TB</button>
     </div>
 
     <div class="slide"
-        ng-class="{active: currentSlide==3}">
-        <h1>Slide Three</h1>
-        <button ng-click="answerQuestion()">True</button>
-        <button ng-click="answerQuestion()">False</button>
+         ng-class="{active: currentSlide==8}">
+        <h2>Pick Your SSD</h2>
+        <button ng-click="answerQuestion('sdd', '128 GB')">128 GB</button>
+        <button ng-click="answerQuestion('sdd', '256 GB')">256 GB</button>
     </div>
 
     <div class="slide"
-        ng-class="{active: currentSlide==4}">
-        <h1>Slide Four</h1>
-        <button ng-click="answerQuestion()">True</button>
-        <button ng-click="answerQuestion()">False</button>
+         ng-class="{active: currentSlide==9}">
+        <h2>Do You Plan On Overclocking?</h2>
+        <button ng-click="answerQuestion('overclocking', 'Yes')">Yes</button>
+        <button ng-click="answerQuestion('overclocking', 'No')">No</button>
+    </div>
+
+    <!--final slide-->
+    <div class="slide"
+         ng-class="{active: currentSlide==10}">
+        <button ng-click="answerQuestion()">BUILD MY GAMING PC!</button>
+
     </div>
 
 </div>
