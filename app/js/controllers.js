@@ -13,4 +13,8 @@ angular.module('myApp.controllers', [])
   }])
   .controller('LandingCtrl', ['$scope', function($scope) {
 
+  }])
+
+  .controller('ResultsCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
+
   }]);
