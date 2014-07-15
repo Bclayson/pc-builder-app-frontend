@@ -96,4 +96,13 @@ angular.module('myApp.controllers', [])
     .controller('ResultsCtrl', ['$scope', 'questionData', function ($scope, questionData) {
         // Make the RESTful request to POST the questionData.
         // Once we get back, display the resultant computer!
-    }]);
+    }])
+
+  .controller('ResultsCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
+    Restangular.one('computer').customPOST({
+      'budget' : 1000
+    }).then(function(data) {
+        $scope.data = data;
+
+    })
+  }]);
