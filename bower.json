@@ -12,5 +12,8 @@
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
     "jquery-ui": "~1.11.0"
+  },
+  "resolutions": {
+    "angular": "1.2.20"
   }
 }
