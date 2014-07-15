@@ -11,6 +11,6 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/questions', {templateUrl: 'partials/questions.html', controller: 'QuestionsCtrl'});
-  $routeProvider.when('/', {templateUrl: 'landing-page/index.html', controller: 'LandingCtrl'});
+  $routeProvider.when('/', {templateUrl: 'partials/landing_page.html', controller: 'LandingCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
