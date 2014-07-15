@@ -40,7 +40,7 @@ angular.module('myApp.controllers', [])
                     }
 
                     else if (answer == 'No') {
-                        scope.currentSlide = 3;
+                        $scope.currentSlide = 3;
                     }
                 }
                 else if (questionData['budget'] == '800') {
