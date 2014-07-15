@@ -3,6 +3,7 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
+<<<<<<< HEAD
     'ngRoute',
     'myApp.filters',
     'myApp.services',
@@ -17,3 +18,17 @@ angular.module('myApp', [
     $routeProvider.otherwise({redirectTo: '/'});
     RestangularProvider.setBaseUrl('http://localhost:9001')
 }]);
+=======
+  'ngRoute',
+  'myApp.filters',
+  'myApp.services',
+  'myApp.directives',
+  'myApp.controllers',
+  'ngAnimate'
+]).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/questions', {templateUrl: 'partials/questions.html', controller: 'QuestionsCtrl'});
+  $routeProvider.when('/', {templateUrl: 'landing-page/index.html', controller: 'LandingCtrl'});
+  $routeProvider.otherwise({redirectTo: '/'});
+}]);
+>>>>>>> slider
