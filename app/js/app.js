@@ -15,5 +15,5 @@ angular.module('myApp', [
     $routeProvider.when('/results', {templateUrl: 'partials/results.html', controller: 'ResultsCtrl'});
     $routeProvider.when('/', {templateUrl: 'partials/landing_page.html', controller: 'LandingCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
-    RestangularProvider.setBaseUrl('http://localhost:9001')
+    RestangularProvider.setBaseUrl('http://localhost:8001')
 }]);
