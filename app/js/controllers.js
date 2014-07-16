@@ -94,6 +94,15 @@ angular.module('myApp.controllers', [])
 
 
     .controller('ResultsCtrl', ['$scope', 'Restangular', 'questionData', function ($scope, Restangular, questionData) {
+        if (angular.equals({}, questionData)) {
+            questionData = {
+                budget: "1200+",
+                oculus_rift: "Yes",
+                resolution: ">1 1920x1200",
+                video_editing: "Yes",
+                watercooler: "Yes"
+            }
+        }
         Restangular.one('results').customPOST(questionData).then(function (data) {
             $scope.data = data;
 
