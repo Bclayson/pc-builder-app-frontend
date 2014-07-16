@@ -1,17 +1,22 @@
 {
-  "name": "pc_builder_app_frontend",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/pc_builder_app_frontend",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
-    "angular-mocks": "~1.2.x",
-    "html5-boilerplate": "~4.3.0",
-    "jquery-ui": "~1.11.0",
-    "font-awesome": "~4.1.0"
-  }
+    "name": "pc_builder_app_frontend",
+    "description": "A starter project for AngularJS",
+    "version": "0.0.0",
+    "homepage": "https://github.com/angular/pc_builder_app_frontend",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "1.2.x",
+        "angular-route": "1.2.x",
+        "angular-loader": "1.2.x",
+        "angular-mocks": "~1.2.x",
+        "html5-boilerplate": "~4.3.0",
+        "jquery-ui": "~1.11.0",
+        "font-awesome": "~4.1.0"
+    },
+    "resolutions": {
+        "angular": "1.2.20"
+
+    }
+
 }
