@@ -10,12 +10,8 @@
     "angular-route": "1.2.x",
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
-<<<<<<< Updated upstream
-    "html5-boilerplate": "~4.3.0"
-=======
     "html5-boilerplate": "~4.3.0",
     "jquery-ui": "~1.11.0",
     "font-awesome": "~4.1.0"
->>>>>>> Stashed changes
   }
 }

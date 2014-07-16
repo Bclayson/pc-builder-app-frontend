@@ -84,7 +84,7 @@ angular.module('myApp.controllers', [])
 
 
 
-            else if (question = 'ssd') {
+            else if (question == 'ssd') {
                 $scope.currentSlide = 10;
             }
 
