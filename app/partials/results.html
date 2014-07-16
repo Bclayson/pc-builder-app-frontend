@@ -7,8 +7,7 @@
             <ol ng-repeat="computer in computers">
                 <h1>{{computer.name}}</h1>
                 <li ng-repeat="(componentType, component) in computer"
-                    ng-if="componentType != 'name' && componentType != 'id'"
-                    style="margin-left: 50px;">
+                    ng-if="componentType != 'name' && componentType != 'id'">
                         {{componentType}}: {{component.name}}
                         <img src={{component.image}} class="img-responsive" alt="Responsive image">
                 </li>
