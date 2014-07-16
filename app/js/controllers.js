@@ -45,7 +45,7 @@ angular.module('myApp.controllers', [])
                 }
                 else if (questionData['budget'] == '800') {
                     $scope.currentSlide = 7;
-                    }
+                }
 
             }
 
@@ -59,7 +59,7 @@ angular.module('myApp.controllers', [])
             }
 
             else if (question == 'video_editing') {
-                if(questionData['budget'] == '1000') {
+                if (questionData['budget'] == '1000') {
                     $scope.currentSlide = 6;
                 }
                 else if (questionData['budget'] == '1200+') {
@@ -72,16 +72,14 @@ angular.module('myApp.controllers', [])
             }
 
 
-
             else if (question == 'hdd') {
                 if (questionData['budget'] == '1000') {
                     $scope.currentSlide = 8;
                 }
-                else if (questionData['budget'] == '800' || '600' ) {
+                else if (questionData['budget'] == '800' || '600') {
                     $scope.currentSlide = 10;
                 }
             }
-
 
 
             else if (question == 'ssd') {
@@ -93,16 +91,20 @@ angular.module('myApp.controllers', [])
     .controller('LandingCtrl', ['$scope', function ($scope) {
 
     }])
-    .controller('ResultsCtrl', ['$scope', 'questionData', function ($scope, questionData) {
-        // Make the RESTful request to POST the questionData.
-        // Once we get back, display the resultant computer!
-    }])
 
-  .controller('ResultsCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-    Restangular.one('computer').customPOST({
-      'budget' : 1000
-    }).then(function(data) {
-        $scope.data = data;
 
-    })
-  }]);
+    .controller('ResultsCtrl', ['$scope', 'Restangular', 'questionData', function ($scope, Restangular, questionData) {
+        if (angular.equals({}, questionData)) {
+            questionData = {
+                budget: "1200+",
+                oculus_rift: "Yes",
+                resolution: ">1 1920x1200",
+                video_editing: "Yes",
+                watercooler: "Yes"
+            }
+        }
+        Restangular.one('results').customPOST(questionData).then(function (data) {
+            $scope.data = data;
+
+        })
+    }]);
