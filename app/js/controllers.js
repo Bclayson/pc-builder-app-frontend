@@ -103,8 +103,8 @@ angular.module('myApp.controllers', [])
                 watercooler: "Yes"
             }
         }
-        Restangular.one('results').customPOST(questionData).then(function (data) {
-            $scope.data = data;
+        Restangular.all('results').customPOST(questionData).then(function (computers) {
+            $scope.computers = computers;
 
         })
     }]);

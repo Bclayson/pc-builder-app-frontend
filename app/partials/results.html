@@ -4,15 +4,14 @@
     </div>
     <div class="row">
         <div class="col-md-8"></div>
-            <ol>
-                <li>CPU</li>
-                <li>GPU</li>
-                <li>MOBO</li>
-                <li>RAM</li>
-                <li>HSU</li>
-                <li>SSD</li>
-                <li>HDD</li>
-                <li>CASE</li>
+            <ol ng-repeat="computer in computers">
+                <h1>{{computer.name}}</h1>
+                <li ng-repeat="(componentType, component) in computer"
+                    ng-if="componentType != 'name' && componentType != 'id'"
+                    style="margin-left: 50px;">
+                        {{componentType}}: {{component.name}}
+                        <img src={{component.image}} class="img-responsive" alt="Responsive image">
+                </li>
             </ol>
         <div class="col-md-4"></div>
             <div><img src="" class="img-responsive" alt="Responsive image"></div>
