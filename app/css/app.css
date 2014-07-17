@@ -3,34 +3,33 @@ body, html {
     height: 100%;
 }
 
-
 .menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
 }
 
 .menu:before {
-  content: "[";
+    content: "[";
 }
 
 .menu:after {
-  content: "]";
+    content: "]";
 }
 
 .menu > li {
-  display: inline;
+    display: inline;
 }
 
 .menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+    content: "|";
+    padding-right: 0.3em;
 }
 
 .menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+    content: "";
+    padding: 0;
 }
 
 #slider_body {
@@ -38,12 +37,12 @@ body, html {
     width: 100%;
     background: #77797a; /* Old browsers */
     background: -moz-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#77797a), color-stop(15%,#a8a8a6), color-stop(50%,#a8a8a6), color-stop(85%,#a8a8a6), color-stop(100%,#77797a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* IE10+ */
-    background: linear-gradient(to right, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77797a', endColorstr='#77797a',GradientType=1 ); /* IE6-9 */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #77797a), color-stop(15%, #a8a8a6), color-stop(50%, #a8a8a6), color-stop(85%, #a8a8a6), color-stop(100%, #77797a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* IE10+ */
+    background: linear-gradient(to right, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77797a', endColorstr='#77797a', GradientType=1); /* IE6-9 */
     position: relative;
 }
 
@@ -68,24 +67,26 @@ body, html {
 #results_body {
     height: 100%;
     width: 100%;
-    background: #77797a; /* Old browsers */
-    background: -moz-linear-gradient(left, #77797a 0%, #a8a8a6 15%, #a8a8a6 50%, #a8a8a6 85%, #77797a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#77797a), color-stop(15%,#a8a8a6), color-stop(50%,#a8a8a6), color-stop(85%,#a8a8a6), color-stop(100%,#77797a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* IE10+ */
-    background: linear-gradient(to right, #77797a 0%,#a8a8a6 15%,#a8a8a6 50%,#a8a8a6 85%,#77797a 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77797a', endColorstr='#77797a',GradientType=1 ); /* IE6-9 */
-    position: relative;
+
 }
 
-#results_body h1 {
+.results-header {
     text-align: center;
-    color: red;
+    padding-top: 30px;
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 84px;
 }
 
-.row h2 {
+.component-image {
+    padding: 15px;
+}
+
+.farewell {
     text-align: center;
-    color: red;
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
 }
 
+.farewell-button {
+    text-align: center;
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
