@@ -1,22 +1,37 @@
 <div id="results_body">
-    <div>
+    <div class="results-header">
         <h1>Here's Your PC!</h1>
     </div>
-    <div class="row">
-        <div class="col-md-8"></div>
-            <ol ng-repeat="computer in computers">
-                <h1>{{computer.name}}</h1>
-                <li ng-repeat="(componentType, component) in computer"
-                    ng-if="componentType != 'name' && componentType != 'id'">
-                        {{componentType}}: {{component.name}}
-                        <img src={{component.image}} class="img-responsive" alt="Responsive image">
-                </li>
-            </ol>
-        <div class="col-md-4"></div>
-            <div><img src="" class="img-responsive" alt="Responsive image"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ol ng-repeat="computer in computers">
+                    <table>
+                    <tr ng-repeat="(componentType, component) in computer"
+                        ng-if="componentType != 'name' && componentType != 'id'">
+                        <td class="component-image">
+                        <a><img width="150px" src={{component.image}} class="img-responsive"
+                         alt="Responsive image"></a>
+                        </td>
+                        <td style="padding-left: 50px;">
+                            {{componentType}}: <a href="{{component.url}}">{{component.name}}</a>
+                        </td>
+                    </tr>
+                    </table>
+                </ol>
+            </div>
+            <div class="col-md-2"></div>
+            <div id="computer-case" class="col-md-4">
+                <div><img src="img/{{}}" class="img-responsive" alt="Responsive image"></div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-        <h2>Now what? Watch this tutorial of how to put all those awesome parts together!</h2>
-            <button>You're Welcome!</button>
+<div class="row">
+    <h2 class="farewell">Now what? Watch this tutorial of how to put all those awesome parts together!</h2>
+
+    <div class="farewell-button">
+        <a href="https://www.youtube.com/watch?v=d_56kyib-Ls" class="btn btn-primary btn-lg active"
+           role="button">You're Welcome</a>
     </div>
+</div>
 </div>
