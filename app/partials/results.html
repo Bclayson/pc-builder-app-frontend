@@ -4,19 +4,25 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <ol ng-repeat="computer in computers">
-                    <li class="component-image" ng-repeat="(componentType, component) in computer"
+                    <table>
+                    <tr ng-repeat="(componentType, component) in computer"
                         ng-if="componentType != 'name' && componentType != 'id'">
-                        {{componentType}}: {{component.name}}
-                        <a><img height="50" width="50" src={{component.image}} class="img-responsive"
+                        <td class="component-image">
+                        <a><img width="150px" src={{component.image}} class="img-responsive"
                          alt="Responsive image"></a>
-                    </li>
+                        </td>
+                        <td style="padding-left: 50px;">
+                            {{componentType}}: <a href="{{component.url}}">{{component.name}}</a>
+                        </td>
+                    </tr>
+                    </table>
                 </ol>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-2"></div>
             <div id="computer-case" class="col-md-4">
-                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpehM5-p_fw_CW6qf3SRTvmgRe2vjt6lWgxHdj9PSRXKRQUVCY" class="img-responsive" alt="Responsive image"></div>
+                <div><img src="img/{{}}" class="img-responsive" alt="Responsive image"></div>
             </div>
         </div>
     </div>
